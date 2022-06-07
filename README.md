@@ -36,6 +36,7 @@ Do some excel with test plan.
 
 Try to make at least 10 test. 
 
+<<<<<<< HEAD
 
 ### Note: TDD - Test Driven Development
 
@@ -45,5 +46,7 @@ As it sounds, it's drive the system creator to create the right program componen
 With that, when we have a prepared tests, not only we can be pretty sure that we built the right materials, 
 we also can test it again in the future, in case we want to make changes that related to those components.
 
+=======
+>>>>>>> branch 'Task-do-account-unit-test' of https://github.com/lingar-studying/java-unit-testing
   
 
