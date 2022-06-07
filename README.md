@@ -41,7 +41,7 @@ Try to make at least 10 test.
 
 The above approach called so. "test driven development." 
 
-As it sounds, it's drive the system creator to create the right program components. 
+As it sounds, it drives the system creator to create the right program components. 
 With that, when we have a prepared tests, not only we can be pretty sure that we built the right materials, 
 we also can test it again in the future, in case we want to make changes that related to those components.
 
