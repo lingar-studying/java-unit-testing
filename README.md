@@ -28,7 +28,7 @@ Naturally, this Object should have some methods:
 You managing some team of developers. They have to develop that piece of code, and constantly in the future to upgrade it. 
 
 Create those objects, without the working code.
-Make a prepared tests for running, on those objects and will test if it's working. 
+Make a prepared tests for running, on those objects and testing if it's working. 
 
 So your developer would be able to run it and test their work. 
 
@@ -45,5 +45,14 @@ As it sounds, it drives the system creator to create the right program component
 With that, when we have a prepared tests, not only we can be pretty sure that we built the right materials, 
 we also can test it again in the future, in case we want to make changes that related to those components.
 
-  
+## TODO Process:
+
+* Add it to the project and check if it's running.
+* Create the object with empty fields and methods. 
+* Prepare 10 test plan
+* Implement them in the test
+* Create the object so it will pass the tests
+
+
+
 
