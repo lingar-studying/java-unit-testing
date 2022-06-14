@@ -3,9 +3,9 @@ How to do unit tests in Java
 
 ## Task: 
 
-Do a unit tests for simple account program. 
+Do a unit tests for simple <b>Account</b> program. 
 
-**The program should Check some Account object.
+**The program should Check some Account object.**
 
 It should have those fields: 
 

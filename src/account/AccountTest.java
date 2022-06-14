@@ -24,7 +24,7 @@ class AccountTest {
 	@BeforeEach
 	void setUp() {
 		account = new Account();
-		System.out.println("Hi" + account.owner);
+		System.out.println("Hi" + account.testingField);
 		
 	}
 	
@@ -34,7 +34,7 @@ class AccountTest {
 		// https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
 		// - Assertion API
 		System.out.println("Befroe each? ");
-		System.out.println(account.owner);
+		System.out.println(account.testingField);
 //		assertEquals("default owner2", account2.owner, "owner name not right" );
 	}
 
@@ -63,8 +63,8 @@ class AccountTest {
 		// - Assertion API
 		Account account2 = new Account();
 
-		System.out.println(account2.owner);
-		assertEquals("default owner2", account2.owner, "owner name not right");
+		System.out.println(account2.testingField);
+		assertEquals("default owner2", account2.testingField, "owner name not right");
 	}
 
 
