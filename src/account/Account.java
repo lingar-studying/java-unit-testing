@@ -7,5 +7,6 @@ package account;
 public class Account {
 	
 	int amount ;
+	String owner = "default owner";
 
 }
