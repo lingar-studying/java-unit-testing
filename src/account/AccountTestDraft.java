@@ -91,7 +91,7 @@ class AccountTestDraft {
 		int expected = account.getBalanace() + amount;
 		//
 //		assertEquals​(int expected, int actual)
-		account.deposite(amount);
+		account.deposit(amount);
 		assertEquals(expected, account.getBalanace(), "deposit isn't working well");
 	}
 	

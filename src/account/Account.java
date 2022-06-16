@@ -16,7 +16,7 @@ public class Account {
 	/**
 	 * Insert money into the account
 	 */
-	public void deposite(int amount) {
+	public void deposit(int amount) {
 		
 	}
 	
