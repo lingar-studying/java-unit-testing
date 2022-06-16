@@ -1,5 +1,5 @@
 Test Plan:
-•	Check that the object created
+•	Checking that the object created
 •	Check that the Deposit is working when you are inserting x Money
 •	Check that the withdraw is working when you are removing x Money. 
 •	Check that you cannot exceed the maxDeviation

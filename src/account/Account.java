@@ -16,7 +16,7 @@ public class Account {
 	/**
 	 * Insert money into the account
 	 */
-	public void deposite() {
+	public void deposite(int amount) {
 		
 	}
 	
@@ -24,7 +24,7 @@ public class Account {
 	/**
 	 * Remove money from the account
 	 */
-	public void withdraw() {
+	public void withdraw(int amout) {
 		
 	}	
 	
@@ -34,9 +34,9 @@ public class Account {
 	}
 
 
-	public void setBalanace(int balanace) {
-		this.balanace = balanace;
-	}
+//	public void setBalanace(int balanace) {
+//		this.balanace = balanace;
+//	}
 
 
 	public int getMaxDeviation() {

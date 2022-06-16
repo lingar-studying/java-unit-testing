@@ -9,45 +9,71 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
-
+//Annotaion list:
+//https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations
 
 /**
  * Official API :
  * 
  * https://junit.org/junit5/docs/current/api/
  * 
- * //Annotaion list:
-//https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations
- * 
- * Recommended guides:
- * https://www.vogella.com/tutorials/JUnit/article.html
- * https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations
- * 
  * @author lingar
  *
  */
 
-class AccountTest {
+class AccountTestDraft {
 	Account account;
+
 	@BeforeEach
 	void setUp() {
 		account = new Account();
-		System.out.println("Preparing to the next test");
+		System.out.println("Hi" + account.testingField);
 		
 	}
 	
-	@DisplayName("Here come the display name" )//The test will be shown with that name
-	@RepeatedTest(5)//will cause it to repreat 5 times
-	void exampleTest() {
-		System.out.println("See here example ");		
+//	@Test
+	@DisplayName("Here come the display name" )
+	@RepeatedTest(5)
+	void assertBeforeEachWorking() {
+		// https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
+		// - Assertion API
+		System.out.println("Befroe each? ");
+		System.out.println(account.testingField);
+//		assertEquals("default owner2", account2.owner, "owner name not right" );
 	}
-	
+
+
+	@Test
+	void tryTest() {
+//		Assert(accou)
+		System.out.println("Hi test");
+
+	}
+
+	@Test
+	void tryTest2() {
+//		Assert(accou)
+		System.out.println("Hi test");
+
+		fail("Failing for stand up again");
+
+	}
+
+	// assertions-and-assumptions
+	// https://www.vogella.com/tutorials/JUnit/article.html#assertions-and-assumptions
 	@Test
 	void assertString() {
-		assertEquals("default owner2", account.testingField, "owner name not right");
-	}	
+		// https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
+		// - Assertion API
+		Account account2 = new Account();
+
+		System.out.println("assert " + account2.testingField);
+		assertEquals("default owner2", account2.testingField, "owner name not right");
+	}
+
 	
-	//Checking that the object created
+	
+	//•	Check that the object created
 	@Test
 	@DisplayName("Checking that the object created")
 	void objectHasCreated() {
@@ -56,12 +82,14 @@ class AccountTest {
 	}
 	
 	
-	//Checking that the Deposit is working when you are inserting x Money
+	//•	Checking that the Deposit is working when you are inserting x Money
+	
 	@Test
 	@DisplayName("Checking that the Deposit is working when you are inserting x Money")
 	void depositWorking() {
 		int amount = 40;
 		int expected = account.getBalanace() + amount;
+		//
 //		assertEquals​(int expected, int actual)
 		account.deposite(amount);
 		assertEquals(expected, account.getBalanace(), "deposit isn't working well");
@@ -72,6 +100,8 @@ class AccountTest {
 	void withdrawWorking() {
 		int amount = 40;
 		int expected = account.getBalanace() - amount;
+		//
+//		assertEquals​(int expected, int actual)
 		account.withdraw(amount);
 		assertEquals(expected, account.getBalanace(), "withdraw isn't working well");
 	}
@@ -90,8 +120,6 @@ class AccountTest {
 
 
 	/**
-	 * 
-	 * Some examples...
 	 * 
 	 * assertEquals
 	 * 
