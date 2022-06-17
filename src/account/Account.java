@@ -6,8 +6,8 @@ package account;
  */
 public class Account {
 	
-	private int balanace ;
-	private int maxDeviation;
+	private int balance ;
+	private int maxDeviation = 50;
 	
 	//Currently not in use - Only for checking etc.. 
 	String testingField = "Default";
@@ -17,20 +17,35 @@ public class Account {
 	 * Insert money into the account
 	 */
 	public void deposit(int amount) {
+		if (amount < 0) {
+			return;
+		}
 		
+		balance +=amount;
 	}
 	
 	
 	/**
 	 * Remove money from the account
 	 */
-	public void withdraw(int amout) {
+	public void withdraw(int amount) {
 		
+		if (amount < 0) {
+			return;
+		}
+		if(balance- amount < -maxDeviation) {
+			
+			System.out.println("maxdeviation = " + maxDeviation);
+			return;
+
+			
+		}
+		balance -= amount;
 	}	
 	
 	//GETTERS AND SETTERS
 	public int getBalanace() {
-		return balanace;
+		return balance;
 	}
 
 
@@ -45,6 +60,9 @@ public class Account {
 
 
 	public void setMaxDeviation(int maxDeviation) {
+		if (maxDeviation < 0) {
+			return;
+		}
 		this.maxDeviation = maxDeviation;
 	}
 	

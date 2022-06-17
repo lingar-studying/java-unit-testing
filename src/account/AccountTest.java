@@ -84,6 +84,7 @@ class AccountTest {
 	void withdrawWorking() {
 		int amount = 40;
 		int expected = account.getBalanace() - amount;
+		account.setMaxDeviation(+(account.getBalanace() - amount - 10));
 		account.withdraw(amount);
 		assertEquals(expected, account.getBalanace(), "withdraw isn't working well");
 	}
