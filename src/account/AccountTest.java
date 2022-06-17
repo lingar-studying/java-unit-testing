@@ -1,6 +1,7 @@
 package account;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -36,10 +37,12 @@ class AccountTest {
 		
 	}
 	
-	@DisplayName("Here come the display name" )//The test will be shown with that name
+	@DisplayName("Example test-Here come the display name" )//The test will be shown with that name
 	@RepeatedTest(5)//will cause it to repreat 5 times
 	void exampleTest() {
-		System.out.println("See here example ");		
+		System.out.println("See here example ");	
+		fail("intended failure");
+
 	}
 	
 	@Test
