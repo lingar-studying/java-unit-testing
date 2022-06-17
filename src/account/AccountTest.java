@@ -8,8 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 
 /**
@@ -28,6 +31,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 
+@TestMethodOrder(OrderAnnotation.class)
 class AccountTest {
 	Account account;
 	@BeforeEach
@@ -37,21 +41,24 @@ class AccountTest {
 		
 	}
 	
+	@Order(1)
 	@DisplayName("Example test-Here come the display name" )//The test will be shown with that name
 	@RepeatedTest(5)//will cause it to repreat 5 times
 	void exampleTest() {
 		System.out.println("See here example ");	
-		fail("intended failure");
+//		fail("intended failure");
 
 	}
 	
+	@Order(2)
 	@Test
 	void assertString() {
-		assertEquals("default owner2", account.testingField, "owner name not right");
+		assertEquals("Default", account.testingField, "owner name not right");
 	}	
 	
 	//Checking that the object created
 	@Test
+	@Order(3)
 	@DisplayName("Checking that the object created")
 	void objectHasCreated() {
 		assertNotNull(account, "Object is NULL2");
@@ -61,6 +68,7 @@ class AccountTest {
 	
 	//Checking that the Deposit is working when you are inserting x Money
 	@Test
+	@Order(4)
 	@DisplayName("Checking that the Deposit is working when you are inserting x Money")
 	void depositWorking() {
 		int amount = 40;
@@ -71,6 +79,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(4)
 	@DisplayName("Checking that the withdraw is working when you are removing x Money. ")
 	void withdrawWorking() {
 		int amount = 40;
@@ -81,6 +90,7 @@ class AccountTest {
 	
 	
 	@Test
+	@Order(5)
 	@DisplayName("Checking that you cannot exceed the maxDeviation")
 	void cannotExceedMaxDeviation() {
 		int amount = 100;
@@ -92,6 +102,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(6)
 	@DisplayName("Check that you can change the maxDeviation.")
 	void canChangeMaxDeviation() {
 
@@ -111,6 +122,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(7)
 	@DisplayName("Checking you cannot withdraw minus")
 	void cannotWithdrawMinus() {
 		int expected = account.getBalanace();
@@ -120,6 +132,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(8)
 	@DisplayName("Checking that you cannot deposit minus")
 	void cannotDepositMinus() {
 		int expected = account.getBalanace();
@@ -130,6 +143,7 @@ class AccountTest {
 	
 	
 	@Test
+	@Order(9)
 	@DisplayName("Checking that you cannot set maxDeviation minus")
 	void cannotSetMaxDeviationMinus() {
 		int expected = account.getMaxDeviation();
@@ -139,6 +153,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(10)
 	@DisplayName("Checking that you can deposit 1 Million")
 	void canDepositMillion() {
 		int expected = account.getBalanace() + 1_000_000;
@@ -148,6 +163,7 @@ class AccountTest {
 	}
 	
 	@Test
+	@Order(11)
 	@DisplayName("Checking deposit and withdraw in the same test")
 	void depositAndWithdraw() {
 		int currBalance = account.getBalanace();
